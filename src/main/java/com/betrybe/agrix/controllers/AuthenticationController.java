@@ -42,16 +42,14 @@ public class AuthenticationController {
    */
   @PostMapping("/login")
   public ResponseEntity<AuthResponseDto> login(@RequestBody AuthRequestDto authRequestDto) {
-      UsernamePasswordAuthenticationToken usernamePassword = new UsernamePasswordAuthenticationToken(
-          authRequestDto.username(),
-          authRequestDto.password()
-      );
+    UsernamePasswordAuthenticationToken usernamePassword = new
+        UsernamePasswordAuthenticationToken(authRequestDto.username(), authRequestDto.password());
 
-      Authentication authenticate = authenticationManager.authenticate(usernamePassword);
-      UserDetails person = (UserDetails) authenticate.getPrincipal();
+    Authentication authenticate = authenticationManager.authenticate(usernamePassword);
+    UserDetails person = (UserDetails) authenticate.getPrincipal();
 
-      String token = tokenService.generateToken(person);
+    String token = tokenService.generateToken(person);
 
-      return ResponseEntity.ok(new AuthResponseDto(token));
+    return ResponseEntity.ok(new AuthResponseDto(token));
   }
 }
