@@ -4,7 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.betrybe.agrix.models.entities.Person;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 /**
@@ -30,7 +30,7 @@ public class TokenService {
    * @param person the person
    * @return the string
    */
-  public String generateToken(User person) {
+  public String generateToken(UserDetails person) {
     return JWT.create()
         .withIssuer("agrix")
         .withSubject(person.getUsername())
