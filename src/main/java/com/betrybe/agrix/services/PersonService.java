@@ -1,6 +1,7 @@
 package com.betrybe.agrix.services;
 
 
+import com.betrybe.agrix.exception.PersonAlreadyExistsException;
 import com.betrybe.agrix.exception.PersonNotFoundException;
 import com.betrybe.agrix.models.entities.Person;
 import com.betrybe.agrix.models.repositories.PersonRepository;
@@ -52,6 +53,10 @@ public class PersonService {
    * Creates a new person.
    */
   public Person create(Person person) {
+    Optional<Person> personFromDb = personRepository.findByUsername(person.getUsername());
+    if (personFromDb.isPresent()) {
+      throw new PersonAlreadyExistsException();
+    }
     return personRepository.save(person);
   }
 }
