@@ -7,6 +7,7 @@ import com.betrybe.agrix.exception.PersonAlreadyExistsException;
 import com.betrybe.agrix.exception.PersonNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -52,6 +53,11 @@ public class GeneralControllerAdvice {
   @ExceptionHandler(PersonNotFoundException.class)
   public ResponseEntity<String> handlePersonNotFoundException(PersonNotFoundException e) {
     return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Pessoa não encontrada!");
+  }
+
+  @ExceptionHandler(AccessDeniedException.class)
+  public ResponseEntity<String> handleAccessDeniedException(AccessDeniedException e) {
+    return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Acesso negado!");
   }
 
   @ExceptionHandler
