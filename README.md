@@ -44,3 +44,6 @@ docker-compose up -d
 ```bash
 docker-compose down
 ```
+
+## 🧹 Linter (Checkstyle)
+O Checkstyle é usado para fazer a análise estática do código. Este projeto já vem com as dependências relacionadas ao linter configuradas no arquivo `pom.xml`. Caso deseje rodar o Checkstyle manualmente, basta executar o comando `mvn checkstyle:check`.
