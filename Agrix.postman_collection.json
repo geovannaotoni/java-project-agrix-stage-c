@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "919bd8f3-a4e9-4510-986d-6a29c0d21948",
+		"name": "Agrix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30192503"
+	},
+	"item": [
+		{
+			"name": "/farms",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZ3JpeCIsInN1YiI6InVzdWFyaW9UZXN0ZTIifQ.YVjWm9PMP3klFuhUnLFUPG8Uw9718fbS2XvED1GRMcg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Fazendinha\",\n  \"size\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/farms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/farms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZ3JpeCIsInN1YiI6InVzdWFyaW9UZXN0ZSJ9.gzoBZb8gIWxsWCem3tyUrnyYqVPNtizrb_pJEVrjlb8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Fazendinha\",\n  \"size\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/farms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/crops",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZ3JpeCIsInN1YiI6InVzdWFyaW9UZXN0ZTIifQ.YVjWm9PMP3klFuhUnLFUPG8Uw9718fbS2XvED1GRMcg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/crops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/crops/{cropId}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/crops/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crops",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/farms/{farmId}/crops",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Couve-flor\",\n  \"plantedArea\": 5.43,\n  \"plantedDate\": \"2022-12-05\",\n  \"harvestDate\": \"2023-06-08\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/farms/1/crops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farms",
+						"1",
+						"crops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/farms/{farmId}/crops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/farms/1/crops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farms",
+						"1",
+						"crops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/fertilizers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Compostagem\",\n  \"brand\": \"Feita em casa\",\n  \"composition\": \"Restos de alimentos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fertilizers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fertilizers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/fertilizers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Compostagem\",\n  \"brand\": \"Feita em casa\",\n  \"composition\": \"Restos de alimentos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fertilizers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fertilizers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/fertilizers/{fertilizerId}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Compostagem\",\n  \"brand\": \"Feita em casa\",\n  \"composition\": \"Restos de alimentos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fertilizers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fertilizers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/crops/{cropId}/fertilizers/{fertilizerId}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Compostagem\",\n  \"brand\": \"Feita em casa\",\n  \"composition\": \"Restos de alimentos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crops/15/fertilizers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crops",
+						"15",
+						"fertilizers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/crops/{cropId}/fertilizers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Compostagem\",\n  \"brand\": \"Feita em casa\",\n  \"composition\": \"Restos de alimentos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crops/1/fertilizers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crops",
+						"1",
+						"fertilizers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/crops/search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZ3JpeCIsInN1YiI6InVzdWFyaW9UZXN0ZSJ9.gzoBZb8gIWxsWCem3tyUrnyYqVPNtizrb_pJEVrjlb8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Compostagem\",\n  \"brand\": \"Feita em casa\",\n  \"composition\": \"Restos de alimentos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crops/search?start=2023-06-01&end=2023-06-08",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crops",
+						"search"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2023-06-01"
+						},
+						{
+							"key": "end",
+							"value": "2023-06-08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/persons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"usuarioTeste\",\n  \"password\": \"senhasecreta\",\n  \"role\": \"MANAGER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"usuarioTeste\",\n  \"password\": \"senhasecreta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
