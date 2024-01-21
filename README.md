@@ -1,5 +1,8 @@
 # Agrix: Sistema de Gestão de Fazendas da AgroTech 🌱🏞️
-A AgroTech é uma empresa busca desenvolver tecnologias para aprimorar a eficiência no cultivo de plantações. O primeiro produto da empresa, o Agrix, é um sistema de gestão e monitoramento das fazendas participantes. Este projeto é a fase final do desenvolvimento do projeto. A fase A está [neste repositório](https://github.com/geovannaotoni/java-project-agrix-stage-a/tree/main) e a fase B está [neste repositório](https://github.com/geovannaotoni/java-project-agrix-stage-b/).
+A AgroTech é uma empresa busca desenvolver tecnologias para aprimorar a eficiência no cultivo de plantações. O primeiro produto da empresa, o Agrix, é um sistema de gestão e monitoramento das fazendas participantes. Este projeto é a fase final do desenvolvimento do projeto. 
+- [Fase A](https://github.com/geovannaotoni/java-project-agrix-stage-a)
+- [Fase B](https://github.com/geovannaotoni/java-project-agrix-stage-b)
+- [Fase C](https://github.com/geovannaotoni/java-project-agrix-stage-c)
 
 ## 🏛️ Estrutura do Banco de Dados
 Este modelo inclui as seguintes tabelas:
